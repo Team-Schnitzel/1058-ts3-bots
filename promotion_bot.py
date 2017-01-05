@@ -4,11 +4,19 @@ import logging.config
 
 
 #General settings:
+BOT_NAME = ''
+USER = ''
+PASS = ''
+HOST = ''
+PORT = ''
+SID = ''
 
 #Promotion bot settings:
 CONNECTIONS_REQUIRED = 100
 DAYS_REQUIRED = 60
 PROMOTION_MESSAGE = 'You have been automatically promoted'
+PROMOTE_FROM = ''  #server group number
+PROMOTE_TO = ''    #server group number
 
 #Logging:
 import logging
