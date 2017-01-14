@@ -37,7 +37,7 @@ def ts3_bot(server):
 
                     if server_group == PROMOTE_FROM and connections >= CONNECTIONS_REQUIRED and seconds_current >= seconds_required:
                         server.servergroupaddclient(sgid=PROMOTE_TO, cldbid=database_id)
-                        logmessage = "Client " + database_id + " was promoted from servergroup id " + PROMOTE_FROM + " to server group ID " +  PROMOTE_TO
+                        logmessage = 'Client ' + database_id + ' was promoted from servergroup id ' + PROMOTE_FROM + ' to server group ID ' +  PROMOTE_TO
                         logging.info(logmessage)
                         server.sendtextmessage(targetmode=1, target=client['clid'], msg=PROMOTION_MESSAGE)
                 except ts3.query.TS3QueryError:
@@ -45,7 +45,7 @@ def ts3_bot(server):
         time.sleep(CHECKING_INTERVAL)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     # Connect to server
     with ts3.query.TS3Connection(HOST, PORT) as ts3conn:
         ts3conn.login(client_login_name=USER, client_login_password=PASS)
